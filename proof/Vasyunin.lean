@@ -60,8 +60,8 @@ def readCoefficients (path : System.FilePath) : IO (Array Rat) := do
 
 -- 4. The Millennium Proof Goal
 -- We map the final goal statement using our array to check against O(1/log N)
-constant vasyunin_json_array : Array Rat
-constant C : ℝ
+opaque vasyunin_json_array : Array Rat
+axiom C : ℝ
 
 theorem baez_duarte_N_1000 : sum_quadratic_form (vasyunin_json_array) < (C / Real.log 1000) := by
   sorry
