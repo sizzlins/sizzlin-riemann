@@ -12279,6 +12279,8 @@
    "D:\\sizzlin-riemann\\proof\\.lake\\packages\\importGraph\\.lake\\build\\lib\\lean\\ImportGraph\\Graph\\TransitiveClosure.ir",
    "D:\\sizzlin-riemann\\proof\\.lake\\packages\\importGraph\\.lake\\build\\lib\\lean\\ImportGraph\\Graph\\TransitiveClosure.olean.server",
    "D:\\sizzlin-riemann\\proof\\.lake\\packages\\importGraph\\.lake\\build\\lib\\lean\\ImportGraph\\Graph\\TransitiveClosure.olean.private"],
+  "CoefficientsData":
+  ["D:\\sizzlin-riemann\\proof\\.lake\\build\\lib\\lean\\CoefficientsData.olean"],
   "Batteries.Util.ProofWanted":
   ["D:\\sizzlin-riemann\\proof\\.lake\\packages\\batteries\\.lake\\build\\lib\\lean\\Batteries\\Util\\ProofWanted.olean",
    "D:\\sizzlin-riemann\\proof\\.lake\\packages\\batteries\\.lake\\build\\lib\\lean\\Batteries\\Util\\ProofWanted.ir",

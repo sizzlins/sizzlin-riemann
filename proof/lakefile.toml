@@ -8,3 +8,6 @@ scope = "leanprover-community"
 
 [[lean_lib]]
 name = "Vasyunin"
+
+[[lean_lib]]
+name = "CoefficientsData"

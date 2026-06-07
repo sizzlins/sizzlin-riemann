@@ -1,0 +1,31 @@
+{"synthetic": false,
+ "schemaVersion": "2025-09-10",
+ "outputs":
+ {"o": ["4a0b01eb5edea536.olean"],
+  "m": false,
+  "i": "7aa695de6775830f.ilean",
+  "c": "c2cfc142b7816b85.c"},
+ "log":
+ [{"message":
+   ".> LEAN_PATH=D:\\sizzlin-riemann\\proof\\.lake\\packages\\Cli\\.lake\\build\\lib\\lean;D:\\sizzlin-riemann\\proof\\.lake\\packages\\batteries\\.lake\\build\\lib\\lean;D:\\sizzlin-riemann\\proof\\.lake\\packages\\Qq\\.lake\\build\\lib\\lean;D:\\sizzlin-riemann\\proof\\.lake\\packages\\aesop\\.lake\\build\\lib\\lean;D:\\sizzlin-riemann\\proof\\.lake\\packages\\proofwidgets\\.lake\\build\\lib\\lean;D:\\sizzlin-riemann\\proof\\.lake\\packages\\importGraph\\.lake\\build\\lib\\lean;D:\\sizzlin-riemann\\proof\\.lake\\packages\\LeanSearchClient\\.lake\\build\\lib\\lean;D:\\sizzlin-riemann\\proof\\.lake\\packages\\plausible\\.lake\\build\\lib\\lean;D:\\sizzlin-riemann\\proof\\.lake\\packages\\mathlib\\.lake\\build\\lib\\lean;D:\\sizzlin-riemann\\proof\\.lake\\build\\lib\\lean c:\\Users\\LOQ\\.elan\\toolchains\\leanprover--lean4---v4.31.0-rc1\\bin\\lean.exe D:\\sizzlin-riemann\\proof\\CoefficientsData.lean -o D:\\sizzlin-riemann\\proof\\.lake\\build\\lib\\lean\\CoefficientsData.olean -i D:\\sizzlin-riemann\\proof\\.lake\\build\\lib\\lean\\CoefficientsData.ilean -c D:\\sizzlin-riemann\\proof\\.lake\\build\\ir\\CoefficientsData.c --setup D:\\sizzlin-riemann\\proof\\.lake\\build\\ir\\CoefficientsData.setup.json --json",
+   "level": "trace"}],
+ "inputs":
+ [["CoefficientsData:deps",
+   [["deps",
+     [["RiemannProof/CoefficientsData:extraDep",
+       [["@RiemannProof:extraDep", "00000000000006bb"]]],
+      ["imports", "00000000000006bb"]]],
+    ["libs",
+     [["import dynlibs", "00000000000006bb"],
+      ["package external libraries", "00000000000006bb"],
+      ["module dynlibs", "00000000000006bb"],
+      ["module plugins", "00000000000006bb"]]]]],
+  ["Lean 4.31.0, commit fd009949156901e6cf15b6d9bf1122294b8e697a",
+   "148386281e429e9a"],
+  ["D:\\sizzlin-riemann\\proof\\CoefficientsData.lean", "a9d68261c1580ec1"],
+  ["options", "00000000000006bb"],
+  ["isModule: false", "feefd2a0d3a1847e"],
+  ["Module.name: CoefficientsData", "003891c4fe59c51d"],
+  ["Package.id?: (some RiemannProof)", "a60844174f6bc818"],
+  ["Module.leanArgs: #[]", "00000000000006bb"]],
+ "depHash": "9ce4b29b4f1cc9fa"}
