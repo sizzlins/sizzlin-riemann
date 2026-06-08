@@ -63,3 +63,11 @@ The foundation is built and verified. Future iterations will focus on:
 1. Scaling the DRL Transformer to $N=10,000+$ via distributed GPU training.
 2. Implementing Log-Absolute Error fitness functions in `kalkulator-ai` to detect micro-variances.
 3. Hunting for the unified "Master Equation" that allows the Vasyunin distance to decay infinitely to zero.
+
+## 🌑 The Shadow of the Neural Network
+
+During **Phase 11**, the genetic engine was unchained, its smoothness protocols lobotomized, and it was granted full access to prime topology DNA (moebius, omega). However, when hunting the amplified Vasyunin dataset, the genetic algorithm completely ignored the discrete operators and instead converged on a massive, continuous Padé approximant.
+
+**The Revelation:** The PyTorch Transformer learned via gradient descent, which requires continuous space. To minimize the Báez-Duarte distance, the neural network was forced to build a smooth, continuous bridge over the jagged cliffs of the prime numbers. When kalkulator-ai analyzed the data, it did not see the discrete topology of the primes; it saw the smooth, continuous *shadow* cast by the neural network.
+
+This proves a fundamental limit of standard deep learning in pure mathematics: **Continuous algorithms will always smooth out discrete topology.** To solve the Riemann Hypothesis, future iterations must rebuild the network architecture to think natively in discrete Dirichlet convolutions, rather than continuous real numbers.
