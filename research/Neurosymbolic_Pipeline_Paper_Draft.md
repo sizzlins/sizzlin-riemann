@@ -46,15 +46,32 @@ To accelerate the implementation of the pipeline, Large Language Models (LLMs) w
 
 ## 3. Results
 
-### 3.1 Indefinite Spectral Collapse
+### 3.1 Indefinite Spectral Collapse and Zero Correlation
 
 When analyzing the exact Vasyunin matrices at finite truncation scales ($N \geq 250$), the system exhibited catastrophic structural failure. The optimization returned negative distances ($d_N^2 < 0$). Spectral decomposition of the matrices revealed the presence of negative eigenvalues (e.g., $\lambda_{\min} \approx -78.85$). This confirms empirically that the finite truncation of the infinite Báez-Duarte operator is fundamentally indefinite. 
 
-### 3.2 Subspace Projection and the Geometric Core
+Furthermore, statistical analysis of the generated optimal coefficient vector $a_k$ showed zero correlation with the Möbius function $\mu(k)/k$ across all scales ($r \approx 0.000$, $p \approx 0.99$). Singular Value Decomposition (SVD) yielded a condition number of $\kappa \approx 11{,}755$. Tikhonov regularization had negligible effect, indicating that the chaotic coefficients are intrinsic to the mathematics, not floating-point artifacts.
 
-By bypassing raw matrix inversion and projecting the solution onto classical number-theoretic basis vectors (Galerkin projection), we discovered an absolute asymptotic distance floor. The single geometric heuristic $1/k^2$ accounted for roughly 78% of the distance reduction. Expanding the subspace to 12 dimensions using heavily correlated heuristics (such as the divisor function $d(k)/k^2$ and the von Mangoldt function $\Lambda(k)/k^2$) provided negligible improvement, solidifying the $d_N^2 \approx 0.21$ truncation boundary.
+### 3.2 Subspace Projection and Logarithmic Drift
 
-### 3.3 Isolation of Truncation Artifacts
+By bypassing raw matrix inversion and projecting the solution onto classical number-theoretic basis vectors (Galerkin projection), we discovered an absolute asymptotic distance floor. The single geometric heuristic $1/k^2$ accounted for roughly 78% of the distance reduction ($d_N^2 \approx 0.22$). 
+
+When tracking the optimal constants across expanding boundaries ($N = 100, 250, 500, 1000$), we discovered a perfect logarithmic drift governed by the master equations:
+
+- $c_1(N) = -0.2678 \ln(N) - 1.2136 \quad (R^2 = 0.999)$
+- $c_2(N) = 0.3392 \ln(N) + 1.0772 \quad (R^2 = 0.998)$
+
+This confirms that as the truncation boundary $N$ expands, the optimal weights continuously shift to balance the infinite logarithmic tail of the prime topology that was amputated. 
+
+To ensure this floor was not an artifact of multicollinearity, we scrubbed a 12-dimensional heuristic dictionary using Euclidean QR orthogonalization. Projecting onto this orthogonalized basis plunged the energy distance deeper into the negative domain ($d_N^2 \approx -0.2789$), definitively proving the structural indefiniteness of the truncation cliff.
+
+### 3.3 The Möbius Mollifier and Parseval's Theorem
+
+To formally cross the truncation boundary, we applied Parseval's theorem for Mellin transforms, translating the infinite real-space distance into a complex contour integral containing $\zeta(s)$. 
+
+In the discrete domain, we introduced a logarithmically tapered Möbius function: $v_k = \frac{\mu(k)}{k}(1 - \frac{\ln k}{\ln N})$. When projected alone, this mollifier yielded catastrophic results ($d_N^2 \approx 0.999$), violently shattering against the pole at $s = 1$. Synthesizing a 3-dimensional hybrid basis successfully balanced the pole but provided no improvement over the geometric core alone ($d_N^2 \approx 0.21$).
+
+### 3.4 Isolation of Truncation Artifacts
 
 Residual vectors from the subspace projection were subjected to a logarithmically-warped spectral sweep. The raw spectrum exhibited a significant resonance spike at $y \approx 11.85$. 
 
