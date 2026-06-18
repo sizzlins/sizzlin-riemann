@@ -7,7 +7,7 @@
 
 ## Abstract
 
-We present a neurosymbolic pipeline designed to investigate the finite-dimensional truncation limits of infinite-dimensional Hilbert space operators, specifically applied to the Nyman-Beurling and Báez-Duarte formulations. Our architecture integrates deep reinforcement learning (PyTorch) with exact algebraic solvers (SciPy, mpmath) and formal verification environments (Lean 4). We demonstrate that finite truncations of the Báez-Duarte measure generate structural noise and indefinite spectral collapse, which standard neural networks misinterpret as trivial solutions when trained without domain-specific prime topology metrics. By projecting onto orthogonal subspaces and performing logarithmically-warped spectral sweeps, we empirically isolate and verify these truncation artifacts. This pipeline highlights the structural limitations of applying bounded computational models to unbounded analytic number theory problems and provides a robust framework for experimental mathematics.
+We present a neurosymbolic pipeline designed to investigate the finite-dimensional truncation limits of infinite-dimensional Hilbert space operators, specifically applied to the Nyman-Beurling and Báez-Duarte formulations. Our architecture integrates deep reinforcement learning (PyTorch) with exact algebraic solvers (SciPy, mpmath), formal verification environments (Lean 4), and symbolic regression engines (Kalkulator-AI). We demonstrate that finite truncations of the Báez-Duarte measure generate structural noise and indefinite spectral collapse, which standard neural networks misinterpret as trivial solutions when trained without domain-specific prime topology metrics. By projecting onto orthogonal subspaces and performing logarithmically-warped spectral sweeps, we empirically isolate and verify these truncation artifacts. This pipeline highlights the structural limitations of applying bounded computational models to unbounded analytic number theory problems and provides a robust framework for experimental mathematics.
 
 ---
 
@@ -40,7 +40,11 @@ To bypass numerical instability, the pipeline was routed through an exact algebr
 
 To ensure the discrete reduction of the continuous functions maintained mathematical fidelity, the environmental constraints and inner product spaces were formally modeled using the Lean 4 theorem prover. Lean 4 was utilized to formally define the $L^2$ space constraints, preventing the Python runtime from optimizing toward mathematically invalid states.
 
-### 2.4 Use of Large Language Models
+### 2.4 Symbolic Regression via Kalkulator-AI
+
+To identify structural relationships within the optimal coefficient vectors extracted from the exact algebraic solvers, we utilized `kalkulator-ai`, a custom symbolic regression engine. The engine performed Abstract Syntax Tree (AST) master equation searches over the detrended coefficient arrays, identifying mathematically exact generating functions (such as Euler's Totient function) governing the truncation boundaries.
+
+### 2.5 Use of Large Language Models
 
 To accelerate the implementation of the pipeline, Large Language Models (LLMs) were utilized strictly as coding assistants. The human author served as the principal systems architect—defining the mathematical goals, curating the logic flow, and vetting all algorithmic outputs—while LLMs were prompted to generate boilerplate syntax for PyTorch and Lean 4 integrations.
 
@@ -56,7 +60,7 @@ Furthermore, statistical analysis of the generated optimal coefficient vector $a
 
 By bypassing raw matrix inversion and projecting the solution onto classical number-theoretic basis vectors (Galerkin projection), we discovered an absolute asymptotic distance floor. The single geometric heuristic $1/k^2$ accounted for roughly 78% of the distance reduction ($d_N^2 \approx 0.22$). 
 
-When tracking the optimal constants across expanding boundaries ($N = 100, 250, 500, 1000$), we discovered a perfect logarithmic drift governed by the master equations:
+When tracking the optimal constants across expanding boundaries ($N = 100, 250, 500, 1000$), our symbolic regression engine autonomously discovered a perfect logarithmic drift governed by the master equations:
 
 - $c_1(N) = -0.2678 \ln(N) - 1.2136 \quad (R^2 = 0.999)$
 - $c_2(N) = 0.3392 \ln(N) + 1.0772 \quad (R^2 = 0.998)$
