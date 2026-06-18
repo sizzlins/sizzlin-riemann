@@ -71,7 +71,7 @@ On the PI's recommendation, we pivoted to training a PyTorch neural network to p
 
 **Phase 5.2 Result (Resuscitation):** `CosineAnnealingWarmRestarts` + gradient clipping + Gaussian noise injection broke through the floor to $d_N^2 = 0.0042$.
 
-![500-Epoch Loss Curve Decay](C:/Users/LOQ/.gemini/antigravity-ide/brain/aa08adfe-11ea-4508-9619-c5ccd34b160b/media__1781780205870.png)
+![500-Epoch Loss Curve Decay](assets/loss_curve.png)
 
 **The Autopsy:** The DRL pipeline was training on the **wrong matrix**. The bounded $L^2(0,1)$ Gram matrix had already been proven trivial. No amount of neural network sophistication could extract prime topology from a matrix that contained none.
 
