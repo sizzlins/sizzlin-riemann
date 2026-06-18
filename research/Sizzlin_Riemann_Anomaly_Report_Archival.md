@@ -86,7 +86,7 @@ On the PI's recommendation, we pivoted to training a PyTorch neural network to p
 
 We abandoned the bounded domain and confronted the true infinite-domain Báez-Duarte measure:
 
-$$M_{jk} = \int_0^\infty \left\{\frac{t}{j}\right\}\left\{\frac{t}{k}\right\} \frac{dt}{t^2}$$
+$$M_{jk} = \int_0^\infty \left\lbrace\frac{t}{j}\right\rbrace\left\lbrace\frac{t}{k}\right\rbrace \frac{dt}{t^2}$$
 
 **Numerical integration (`scipy.integrate.quad`) failed catastrophically**, throwing `IntegrationWarning` after 77 seconds for $N=100$, producing garbage values.
 
@@ -200,7 +200,11 @@ This formally transformed the optimization from guessing discrete matrix weights
 
 ### Phase 13: Residual Frequency Extraction
 
-We isolated the exact residual vector $\vec{r}_N = L - M\vec{a}_{\text{hybrid}}$ and performed a logarithmically-warped spectral sweep:
+We isolated the exact residual vector:
+
+$$ \vec{r}_N = L - M\vec{a}_{\text{hybrid}} $$
+
+and performed a logarithmically-warped spectral sweep:
 
 $$F(y) = \left|\sum_{k=1}^N r_k \cdot k^{iy}\right|$$
 
