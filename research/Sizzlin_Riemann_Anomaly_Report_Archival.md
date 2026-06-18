@@ -41,7 +41,7 @@ We began by constructing the bounded Nyman-Beurling Gram matrix:
 
 $$M_{ij} = \int_0^1 \{ix\}\{jx\}\, dx$$
 
-Using a symbolic regression engine ([kalkulator-ai](https://github.com/sizzlins/sizzlin-riemann)), the agent autonomously discovered that the optimal coefficients form a geometric sequence governed by **Euler's Totient function**:
+Using a symbolic regression engine ([kalkulator-ai](https://github.com/sizzlins/kalkulator-ai)), the agent autonomously discovered that the optimal coefficients form a geometric sequence governed by **Euler's Totient function**:
 
 $$a_k = \frac{\pi^2}{3N} \frac{\varphi(k)}{k}$$
 
