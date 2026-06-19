@@ -326,4 +326,6 @@ VERIFIED: The integration engine shatters against the logarithmic discontinuitie
 ### Conclusion
 By mapping these 19 specific boundaries, the Sizzlin-Riemann project successfully established the structural limitations of applying both traditional linear algebra and modern continuous machine learning to the finite-truncation limits of the Nyman-Beurling and Báez-Duarte formulations.
 
-**Findings 1–10 were independently re-verified** by running [`prove_all_10_findings.py`](file:///c:/Users/LOQ/PycharmProjects/sizzlin-riemann/src/prove_all_10_findings.py), which executed in 8.5 seconds and reproduced every numerical result listed above. **Findings 11–19 are sourced directly from the conversation logs** with exact line citations.
+**Findings 1–10 were independently re-verified** by running [`prove_all_10_findings.py`](file:///c:/Users/LOQ/PycharmProjects/sizzlin-riemann/src/prove_all_10_findings.py). 
+**Findings 11–19 were independently re-verified** by running [`prove_findings_11_19.py`](file:///c:/Users/LOQ/PycharmProjects/sizzlin-riemann/src/prove_findings_11_19.py).
+Both scripts instantly reproduce the numerical boundaries listed above, confirming the mathematical realities alongside the exact conversation log citations.
