@@ -336,9 +336,12 @@ Both scripts instantly reproduce the numerical boundaries listed above, confirmi
 
 Following the execution of an automated literature sweep via the **ArXiv API** (querying the latest preprints in mathematics and computer science) and supplemented by targeted web searches, we have cross-referenced the 19 findings against the published scientific record.
 
-Out of the 19 findings, **15 returned ZERO hits** across the ArXiv database and targeted mathematical web searches. While the foundational matrices (Báez-Duarte, Vasyunin) are known, the specific computational tears and boundaries discovered by this project appear to be **undocumented in the public mathematical literature.**
+Out of the 19 findings, **14 returned ZERO hits** across the ArXiv database and targeted mathematical web searches. While the foundational matrices (Báez-Duarte, Vasyunin) are known, the specific computational tears and boundaries discovered by this project appear to be **undocumented in the public mathematical literature.**
 
-### 🔴 Known / Published (1 Finding)
+### 🔴 Known / Published (2 Findings)
+- **Finding 11: The Rank-One Collapse**
+  - **ArXiv Hits:** 1 (*Spectral and Analytic Structure of the Nyman–Beurling–Báez–Duarte Approximation*, 2025 Preprint).
+  - **Assessment:** This recent preprint explicitly documents the anomaly, names it the "Rank-One Collapse," proves the distance floors at exactly 1/2, and confirms that correct numerical implementations must pivot to genuinely nonlinear $\{kx\}$ dilations.
 - **Finding 18: The $\mathcal{O}(N \log N)$ Fast-Projection Bypass**
   - **ArXiv Hits:** 3 (*A strengthening of the Nyman-Beurling criterion for the Riemann Hypothesis*, J.F. Burnol).
   - **Assessment:** The theoretical foundation of projecting onto subspace distributions is documented. Our highly optimized computational execution is novel, but the math is known.
@@ -351,13 +354,12 @@ Out of the 19 findings, **15 returned ZERO hits** across the ArXiv database and 
   - **ArXiv Hits:** 3 (*An optimal choice of Dirichlet polynomials for the Nyman-Beurling criterion*).
   - **Assessment:** Dirichlet approximations are known, but the explicit computational proof that the matrix natively prioritizes quadratic $1/k^2$ decay to manage the $s=1$ pole provides a novel algorithmic verification.
 
-### 🟢 Potentially Novel (15 Findings)
-The following 15 findings are completely absent from the ArXiv queries, representing prime candidates for original experimental mathematics research:
+### 🟢 Potentially Novel (14 Findings)
+The following 14 findings are completely absent from the ArXiv queries, representing prime candidates for original experimental mathematics research:
 
 **Structural Matrix Collapses:**
 - Finding 6: The Truncation Cliff / Loss of Positive-Definiteness
 - Finding 7: Gram-Schmidt Orthogonalization Plunge
-- Finding 11: The Rank-One Collapse
 - Finding 17: The Normalization Tear / Negative Distance Anomaly
 
 **Calculus & Machine Learning Failures:**
