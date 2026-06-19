@@ -9,6 +9,7 @@
 
 We present a neurosymbolic pipeline designed to investigate the finite-dimensional truncation limits of infinite-dimensional Hilbert space operators, specifically applied to the Nyman-Beurling and Báez-Duarte formulations. Our architecture integrates deep reinforcement learning (PyTorch) with exact algebraic solvers (SciPy, mpmath), formal verification environments (Lean 4), and symbolic regression engines (Kalkulator-AI). We demonstrate that finite truncations of the Báez-Duarte measure generate structural noise and indefinite spectral collapse, which standard neural networks misinterpret as trivial solutions when trained without domain-specific prime topology metrics. By projecting onto orthogonal subspaces and performing logarithmically-warped spectral sweeps, we empirically isolate and verify these truncation artifacts. This pipeline highlights the structural limitations of applying bounded computational models to unbounded analytic number theory problems and provides a robust framework for experimental mathematics.
 
+
 ---
 
 ## 1. Introduction

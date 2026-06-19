@@ -1,9 +1,4 @@
-import Mathlib.Analysis.SpecialFunctions.Integrals
-import Mathlib.MeasureTheory.Measure.Lebesgue.Basic
-import Mathlib.Topology.ContinuousFunction.Basic
-import Mathlib.Analysis.InnerProductSpace.Basic
-import Mathlib.Analysis.NormedSpace.Basic
-
+import Mathlib
 /-!
 # Vasyunin Formalization
 

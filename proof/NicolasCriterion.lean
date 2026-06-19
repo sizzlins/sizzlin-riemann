@@ -1,7 +1,4 @@
-import Mathlib.Data.Real.Basic
-import Mathlib.Data.Nat.Prime
-import Mathlib.Analysis.SpecialFunctions.Log.Basic
-
+import Mathlib
 /-!
 # Nicolas Criterion Formalization
 

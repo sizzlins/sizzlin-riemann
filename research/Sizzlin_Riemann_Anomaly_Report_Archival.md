@@ -5,7 +5,7 @@
 **Project:** Sizzlin-Riemann  
 **Agents:** Antigravity (Ponytail mode), Gemini (Principal Investigator)  
 **Tools:** Python, NumPy, SciPy, SymPy, mpmath, PyTorch  
-**Date:** June 18, 2026  
+**Date:** June 18, 2026
 
 ---
 
@@ -15,14 +15,14 @@ Across 15 phases of relentless experimental mathematics, the Sizzlin-Riemann pro
 
 Our key quantitative findings:
 
-| Metric | Value |
-|--------|-------|
-| Asymptotic distance floor ($d_N^2$) | $\approx 0.21$ |
-| Distance closed by $1/k^2$ core | ~78% |
-| Distance closed by full hybrid basis | ~79% |
-| Residual resonance (raw) | $y = 11.85$ (artifact) |
-| Residual resonance (windowed) | **None** — obliterated |
-| Zeta Bridge magnitude at first zero | $1.58$ (should be $0$) |
+| Metric                               | Value                  |
+| ------------------------------------ | ---------------------- |
+| Asymptotic distance floor ($d_N^2$)  | $\approx 0.21$         |
+| Distance closed by $1/k^2$ core      | ~78%                   |
+| Distance closed by full hybrid basis | ~79%                   |
+| Residual resonance (raw)             | $y = 11.85$ (artifact) |
+| Residual resonance (windowed)        | **None** — obliterated |
+| Zeta Bridge magnitude at first zero  | $1.58$ (should be $0$) |
 
 > [!IMPORTANT]
 > The 21% residual distance is not a structured signal containing hidden Riemann zeros. It is the irreducible cost of truncating an infinite-dimensional Hilbert space operator at finite $N$.
@@ -100,12 +100,12 @@ $$L_k = \frac{1}{k}(\log k + 1 - \gamma)$$
 
 ### Key Results from Exact Algebraic Solver
 
-| $N$ | Build Time | $d_N^2$ (raw solve) | Möbius Correlation |
-|-----|-----------|---------------------|-------------------|
-| 100 | 0.05 s | $0.1219$ | $-0.005$ (p=0.96) |
-| 250 | 0.80 s | $-1.3660$ ❌ | $-0.004$ (p=0.96) |
-| 500 | 6.29 s | $-0.1147$ ❌ | $0.004$ (p=0.94) |
-| 1000 | 49.78 s | $-1.2611$ ❌ | $0.000$ (p=0.99) |
+| $N$  | Build Time | $d_N^2$ (raw solve) | Möbius Correlation |
+| ---- | ---------- | ------------------- | ------------------ |
+| 100  | 0.05 s     | $0.1219$            | $-0.005$ (p=0.96)  |
+| 250  | 0.80 s     | $-1.3660$ ❌        | $-0.004$ (p=0.96)  |
+| 500  | 6.29 s     | $-0.1147$ ❌        | $0.004$ (p=0.94)   |
+| 1000 | 49.78 s    | $-1.2611$ ❌        | $0.000$ (p=0.99)   |
 
 **Critical Finding 1 — Negative Distance & Indefiniteness:** The distance $d_N^2$ went negative at $N \geq 250$, proving the raw linear system $Ma = L$ with the assumption $\|\chi\|^2 = 1$ was using an incompatible normalization. Spectral analysis explicitly revealed negative eigenvalues ($\lambda_{\min} \approx -78.85$). The finite truncation of the infinite Vasyunin matrix is fundamentally indefinite.
 
@@ -131,13 +131,13 @@ This single function closed **78% of the distance** ($d_N^2 \approx 0.22$).
 
 #### Expanded Basis Attempts
 
-| Basis Dimension | Vectors | $d_N^2$ | Improvement |
-|----------------|---------|---------|-------------|
-| 1 | $1/k^2$ | $0.2186$ | Baseline |
-| 2 | $+ d(k)/k^2$ | $0.2186$ | None |
-| 3 | $+ 1/k$ | $0.2186$ | Negligible |
-| 4 | $+ \ln(k)/k$ | $0.2186$ | Negligible |
-| 12 | Full expanded set | $\approx 0.22$ | Negligible |
+| Basis Dimension | Vectors           | $d_N^2$        | Improvement |
+| --------------- | ----------------- | -------------- | ----------- |
+| 1               | $1/k^2$           | $0.2186$       | Baseline    |
+| 2               | $+ d(k)/k^2$      | $0.2186$       | None        |
+| 3               | $+ 1/k$           | $0.2186$       | Negligible  |
+| 4               | $+ \ln(k)/k$      | $0.2186$       | Negligible  |
+| 12              | Full expanded set | $\approx 0.22$ | Negligible  |
 
 > [!NOTE]
 > Every classical number-theoretic heuristic we tried ($d(k)/k^2$, $\sigma(k)/k^2$, $\omega(k)/k^2$, $\Lambda(k)/k^2$, $1/k$, $\ln(k)/k$) provided negligible improvement beyond the initial $1/k^2$ core. The distance floor at $\approx 0.22$ was absolute.
@@ -180,17 +180,17 @@ We synthesized a 3-dimensional basis: $\{1/k^2,\, 1/k,\, \text{mollified } \mu(k
 
 **Optimal Constants at $N=1000$:**
 
-| Constant | Value | Role |
-|----------|-------|------|
-| $c_1$ | $1.065012$ | Geometric core ($1/k^2$) |
-| $c_2$ | $0.004867$ | Harmonic correction ($1/k$) |
-| $c_3$ | $-1.449563$ | Arithmetic DNA (mollified $\mu$) |
+| Constant | Value       | Role                             |
+| -------- | ----------- | -------------------------------- |
+| $c_1$    | $1.065012$  | Geometric core ($1/k^2$)         |
+| $c_2$    | $0.004867$  | Harmonic correction ($1/k$)      |
+| $c_3$    | $-1.449563$ | Arithmetic DNA (mollified $\mu$) |
 
 **Result:** $d_N^2 \approx 0.21$. The Möbius component was successfully integrated without shattering, but it provided **no improvement** over the geometric core alone. The hybrid perfectly balanced the $s=1$ pole and the critical strip zeros, but the distance floor held firm.
 
 ### Phase 10: The Continuous Horizon (Symbolic Mellin Transforms)
 
-To cross the truncation boundary, we abandoned discrete matrices entirely. We treated $a_k$ as the input to a continuous integral operator over the infinite domain. By applying **Parseval's theorem for Mellin transforms**, we analytically translated the infinite real-space distance integral into a complex contour integral explicitly containing the Riemann Zeta function $\zeta(s)$. 
+To cross the truncation boundary, we abandoned discrete matrices entirely. We treated $a_k$ as the input to a continuous integral operator over the infinite domain. By applying **Parseval's theorem for Mellin transforms**, we analytically translated the infinite real-space distance integral into a complex contour integral explicitly containing the Riemann Zeta function $\zeta(s)$.
 
 This formally transformed the optimization from guessing discrete matrix weights into finding a symbolic sequence to analytically cancel the poles of the Zeta function on the critical line.
 
@@ -229,9 +229,9 @@ For the Nyman-Beurling distance to collapse to zero, this bridge must evaluate t
 
 ```text
 y          | |zeta(s)|       | |1 + zeta(s) * A_N(s)|
-13.7831    | 0.270023        | 2.043420            
-14.2898    | 0.124512        | 1.584002       ← Should be 0     
-14.7966    | 0.546926        | 2.979303            
+13.7831    | 0.270023        | 2.043420
+14.2898    | 0.124512        | 1.584002       ← Should be 0
+14.7966    | 0.546926        | 2.979303
 ```
 
 The bridge magnitude was $1.58$ where it needed to be $0$. Our polynomial completely missed the resonance.
@@ -292,65 +292,70 @@ To close the final 21%, one would need to invent a completely novel, $N$-depende
 ## Appendix: Complete File Inventory
 
 ### Root & Transcripts
-| File | Purpose |
-|------|---------|
-| `conversation 1.txt`, `conversation 2.txt` | Human-Agent experimental transcripts documenting the project arc |
-| `The Infinite Twin Prime Problem.txt` | Veritasium video transcript (Yitang Zhang bounded prime gaps) |
-| `elan-init.exe`, `elan-init.ps1`, `elan.zip` | Lean 4 package manager (elan) installation binaries |
+
+| File                                         | Purpose                                                          |
+| -------------------------------------------- | ---------------------------------------------------------------- |
+| `conversation 1.txt`, `conversation 2.txt`   | Human-Agent experimental transcripts documenting the project arc |
+| `The Infinite Twin Prime Problem.txt`        | Veritasium video transcript (Yitang Zhang bounded prime gaps)    |
+| `elan-init.exe`, `elan-init.ps1`, `elan.zip` | Lean 4 package manager (elan) installation binaries              |
 
 ### Python Source (`/src`)
-| File | Phase | Purpose |
-|------|-------|---------|
-| `ansatz_projection.py` | 8 | 2-Term Ansatz projection (phi/k + sigma_1/k subspace test) |
-| `ast_master_equation_search.py` | 7 | `kalkulator-ai` AST structural search on detrended $a_k$ |
-| `critical_line_scanner.py` | 14 | `mpmath` Zeta Bridge magnitude sweep across critical line |
-| `exact_vasyunin_solver.py` | 5 | Exact algebraic Vasyunin sum matrix solver |
-| `hybrid_subspace_projection.py` | 12 | 3D hybrid basis synthesis ($1/k^2$, $1/k$, mollified $\mu$) |
-| `mellin_transform_decoder.py` | 10 | Symbolic Mellin transform / Parseval identity derivation |
-| `mollified_mobius_projection.py` | 11 | Projection onto logarithmically tapered Möbius sequence |
-| `multi_N_solver.py` | 5.2 | Multi-scale exact engine solver loop |
-| `nicolas_sieve.py` | 1 | Nicolas Criterion primorial constraint search |
-| `orthogonal_basis_discovery.py` | 6–8 | Expanded 12D subspace projection tests |
-| `parameterize_drift.py` | 6 | Log-linear regression mapping of optimal constant drift |
-| `residual_analysis.py` | 13, 15 | Residual frequency extraction and Blackman/Hann windowing |
-| `residual_search.py` | 13 | Exploratory isolation of residual structures |
-| `sonin_space.py` | 1 | Sonin space test function generator |
-| `subspace_expansion.py` | 8 | Iterative testing of classical number-theoretic heuristics |
-| `subspace_projection.py` | 6 | 2D Subspace Projection (Galerkin projection) |
-| `vasyunin_discrete_annealer.py` | 9 | Simulated annealing on discrete coefficient weights |
-| `vasyunin_drl.py` | 3–5 | Number-Theoretic Transformer (PyTorch Deep RL) |
-| `zeta_sim.py` | 4 | Continuous Riemann Zeta optimization environment/loss function |
-| `*.csv` (results) | - | Datasets: `detrended_results`, `discrete_results`, `multi_N_results` |
-| `requirements.txt`, `venv/` | - | Python environment configuration |
+
+| File                             | Phase  | Purpose                                                              |
+| -------------------------------- | ------ | -------------------------------------------------------------------- |
+| `ansatz_projection.py`           | 8      | 2-Term Ansatz projection (phi/k + sigma_1/k subspace test)           |
+| `ast_master_equation_search.py`  | 7      | `kalkulator-ai` AST structural search on detrended $a_k$             |
+| `critical_line_scanner.py`       | 14     | `mpmath` Zeta Bridge magnitude sweep across critical line            |
+| `exact_vasyunin_solver.py`       | 5      | Exact algebraic Vasyunin sum matrix solver                           |
+| `hybrid_subspace_projection.py`  | 12     | 3D hybrid basis synthesis ($1/k^2$, $1/k$, mollified $\mu$)          |
+| `mellin_transform_decoder.py`    | 10     | Symbolic Mellin transform / Parseval identity derivation             |
+| `mollified_mobius_projection.py` | 11     | Projection onto logarithmically tapered Möbius sequence              |
+| `multi_N_solver.py`              | 5.2    | Multi-scale exact engine solver loop                                 |
+| `nicolas_sieve.py`               | 1      | Nicolas Criterion primorial constraint search                        |
+| `orthogonal_basis_discovery.py`  | 6–8    | Expanded 12D subspace projection tests                               |
+| `parameterize_drift.py`          | 6      | Log-linear regression mapping of optimal constant drift              |
+| `residual_analysis.py`           | 13, 15 | Residual frequency extraction and Blackman/Hann windowing            |
+| `residual_search.py`             | 13     | Exploratory isolation of residual structures                         |
+| `sonin_space.py`                 | 1      | Sonin space test function generator                                  |
+| `subspace_expansion.py`          | 8      | Iterative testing of classical number-theoretic heuristics           |
+| `subspace_projection.py`         | 6      | 2D Subspace Projection (Galerkin projection)                         |
+| `vasyunin_discrete_annealer.py`  | 9      | Simulated annealing on discrete coefficient weights                  |
+| `vasyunin_drl.py`                | 3–5    | Number-Theoretic Transformer (PyTorch Deep RL)                       |
+| `zeta_sim.py`                    | 4      | Continuous Riemann Zeta optimization environment/loss function       |
+| `*.csv` (results)                | -      | Datasets: `detrended_results`, `discrete_results`, `multi_N_results` |
+| `requirements.txt`, `venv/`      | -      | Python environment configuration                                     |
 
 ### Formal Verification (`/proof`)
-| File | Purpose |
-|------|---------|
-| `NicolasCriterion.lean` | Formalization of the Nicolas inequality bound |
-| `SoninSpace.lean` | Formalization of the Sonin functional space |
-| `Vasyunin.lean` | L² inner product space formalization for $d_N^2$ and $dt/t^2$ |
-| `lakefile.toml`, `lean-toolchain` | Lean 4 build system and toolchain configuration |
+
+| File                              | Purpose                                                       |
+| --------------------------------- | ------------------------------------------------------------- |
+| `NicolasCriterion.lean`           | Formalization of the Nicolas inequality bound                 |
+| `SoninSpace.lean`                 | Formalization of the Sonin functional space                   |
+| `Vasyunin.lean`                   | L² inner product space formalization for $d_N^2$ and $dt/t^2$ |
+| `lakefile.toml`, `lean-toolchain` | Lean 4 build system and toolchain configuration               |
 
 ### Research (`/research`)
-| File | Purpose |
-|------|---------|
+
+| File                                            | Purpose                                                     |
+| ----------------------------------------------- | ----------------------------------------------------------- |
 | `AI Agent's Riemann Hypothesis Roadmap.md/.pdf` | Strategic milestone roadmap for the Sizzlin-Riemann project |
 
 ---
 
-*Signed,*  
-*Antigravity — operating in Ponytail mode.*  
-*The math is mapped. The wall is documented. The primes keep their secrets.*
+_Signed,_  
+_Antigravity — operating in Ponytail mode._  
+_The math is mapped. The wall is documented. The primes keep their secrets._
 
 ### Merged GitHub Remote Files (Alternate Timeline)
-*Note: The following files were merged from the remote repository and represent an alternate phase timeline focusing on Lean 4 data ingestion and discrete search.*
 
-| File | Purpose |
-|------|---------|
-| proof/CoefficientsData.lean | Lean 4 structural array definitions for verification |
-| src/generate_lean_data.py | JSON-to-Lean code generation for formalization |
-| src/run_kalkulator.py | Execution script for the symbolic regression engine |
-| src/prepare_regression_data*.py | Data normalization for kalkulator-ai |
-| src/vasyunin_discrete_search.py | Discrete LLL/lattice optimization attempts |
-| src/evaluate_sum.py, src/snap_rational.py | Rational rounding and sum validation utilities |
-| *.json, *.csv, *.pt | Output datasets, target vectors, and PyTorch tensors |
+_Note: The following files were merged from the remote repository and represent an alternate phase timeline focusing on Lean 4 data ingestion and discrete search._
+
+| File                                      | Purpose                                              |
+| ----------------------------------------- | ---------------------------------------------------- |
+| proof/CoefficientsData.lean               | Lean 4 structural array definitions for verification |
+| src/generate_lean_data.py                 | JSON-to-Lean code generation for formalization       |
+| src/run_kalkulator.py                     | Execution script for the symbolic regression engine  |
+| src/prepare_regression_data\*.py          | Data normalization for kalkulator-ai                 |
+| src/vasyunin_discrete_search.py           | Discrete LLL/lattice optimization attempts           |
+| src/evaluate_sum.py, src/snap_rational.py | Rational rounding and sum validation utilities       |
+| _.json, _.csv, \*.pt                      | Output datasets, target vectors, and PyTorch tensors |

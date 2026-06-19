@@ -1,6 +1,4 @@
-import Mathlib.Analysis.Fourier.FourierTransform
-import Mathlib.Analysis.SpecialFunctions.Integrals
-
+import Mathlib
 /-!
 # Sonin Space Formalization
 
