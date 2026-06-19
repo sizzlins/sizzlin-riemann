@@ -344,33 +344,33 @@ Out of the 19 findings, **15 returned ZERO hits** across the ArXiv database and 
   - **Assessment:** The theoretical foundation of projecting onto subspace distributions is documented. Our highly optimized computational execution is novel, but the math is known.
 
 ### 🟡 Partial Overlap (3 Findings)
-- **Finding 1 (Trivial Sandbox Hallucination)** & **Finding 14 (Dual-Master Paradox)**
+- **Finding 1 (The "Trivial Sandbox" Hallucination)** & **Finding 14 (The Dual-Master Paradox)**
   - **ArXiv Hits:** 1 (*On the Connection Between Riemann Hypothesis and a Special Class of Neural Networks*).
   - **Assessment:** General neural network intersections are known. The "Dual-Master Paradox" (Totient vs Möbius conflict) is a uniquely articulated observation of a known broader field.
-- **Finding 9 (The Dirichlet Bridge / 0.50 Floor)**
+- **Finding 2 (The $1/k^2$ Macroscopic Geometric Core)**
   - **ArXiv Hits:** 3 (*An optimal choice of Dirichlet polynomials for the Nyman-Beurling criterion*).
-  - **Assessment:** Dirichlet approximations are known, but our exact computational floor of 0.50 provides a novel algorithmic verification.
+  - **Assessment:** Dirichlet approximations are known, but the explicit computational proof that the matrix natively prioritizes quadratic $1/k^2$ decay to manage the $s=1$ pole provides a novel algorithmic verification.
 
 ### 🟢 Potentially Novel (15 Findings)
 The following 15 findings are completely absent from the ArXiv queries, representing prime candidates for original experimental mathematics research:
 
 **Structural Matrix Collapses:**
-- Finding 6: The Negative Eigenvalue Trap
-- Finding 7: The Orthogonalization Plunge
+- Finding 6: The Truncation Cliff / Loss of Positive-Definiteness
+- Finding 7: Gram-Schmidt Orthogonalization Plunge
 - Finding 11: The Rank-One Collapse
-- Finding 17: The Normalization Tear
+- Finding 17: The Normalization Tear / Negative Distance Anomaly
 
 **Calculus & Machine Learning Failures:**
+- Finding 5: The "Continuous Shadow" Phenomenon
 - Finding 10: The Micro-Variance Trap
 - Finding 13: Runge's Phenomenon / The Interpolation Trap
 - Finding 15: The Bound Exceedance Paradox
 - Finding 19: The High-Frequency Integration Wall
 
 **Theoretical Limits & Heuristics:**
-- Finding 2: The $0.22$ Asymptotic Distance Floor
-- Finding 3: The Spectral Shift ($11.86 \to 14.13$)
-- Finding 4: The Dimensional Void (21%)
-- Finding 5: The "Divisor DNA" / Estermann Connection
-- Finding 8: The $\mathcal{O}(N)$ Subspace Collapse / 2-Term Ansatz
+- Finding 3: The "Zeta Pole Collision" and the Need for Mollifiers
+- Finding 4: The 0.21 Asymptotic Distance Floor
+- Finding 8: Finite Optimal Coefficients Lack Möbius Correlation
+- Finding 9: The Spectral Leakage Evaporation
 - Finding 12: The Finite-Domain Mellin Scaling Anomaly
-- Finding 16: Multicollinearity Collapse
+- Finding 16: The Divisor Function Artifact / Multicollinearity Collapse
