@@ -20,6 +20,8 @@ This repository operates on a four-stage neurosymbolic bridge:
 3. **Formal Verification (Lean 4):** A mathematically strict evaluation environment. It translates the continuous Lebesgue integral of the Báez-Duarte measure into a discrete, computable Greatest Common Divisor (GCD) matrix, officially evaluating the neural network's accuracy using Lean 4's `norm_num` tactic.
 4. **Neurosymbolic Symbolic Regression (`kalkulator-ai`):** A custom-patched genetic programming engine injected with discrete number-theoretic DNA. It natively mutates Abstract Syntax Trees (AST) using the Möbius function and prime factor limits to reverse-engineer algebraic master equations from AI-generated data.
 
+https://github.com/sizzlins/kalkulator-ai
+
 ---
 
 ## 🔬 Research Milestones
