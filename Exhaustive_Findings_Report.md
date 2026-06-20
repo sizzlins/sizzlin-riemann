@@ -360,48 +360,46 @@ VERIFIED: The negative eigenvalues force the projection a^T L to exceed 1.0, cau
 
 
 ### Conclusion
-By mapping these 19 specific boundaries, the Sizzlin-Riemann project successfully established the structural limitations of applying both traditional linear algebra and modern continuous machine learning to the finite-truncation limits of the Nyman-Beurling and Báez-Duarte formulations.
+This report documents the engineering challenges encountered during the construction of the Sizzlin-Riemann neurosymbolic pipeline. The observations listed above are not novel mathematical discoveries; they represent well-known computational and algorithmic limitations that were independently encountered and empirically verified during this project. The primary contribution of this work is the **pipeline architecture itself** — a three-stage system integrating continuous optimization (PyTorch), discrete symbolic regression (Kalkulator-AI), and formal theorem proving (Lean 4) — and the systematic documentation of how each stage fails when exposed to the rigid, discrete topology of analytic number theory.
+
+For a formal writeup of the engineering methodology, see [`Neurosymbolic_Pipeline_Paper_Draft.md`](https://github.com/sizzlins/sizzlin-riemann/blob/main/Neurosymbolic_Pipeline_Paper_Draft.md).
 
 **Findings 1–10 were independently re-verified** by running [`prove_all_10_findings.py`](file:///c:/Users/LOQ/PycharmProjects/sizzlin-riemann/src/prove_all_10_findings.py). 
 **Findings 11–19 were independently re-verified** by running [`prove_findings_11_19.py`](file:///c:/Users/LOQ/PycharmProjects/sizzlin-riemann/src/prove_findings_11_19.py).
-Both scripts instantly reproduce the numerical boundaries listed above, confirming the mathematical realities alongside the exact conversation log citations.
+Both scripts instantly reproduce the numerical outputs listed above.
 
 ---
 
-## Addendum: Literature Novelty Assessment
+## Addendum: Literature Context & Prior Work
 
-Following the execution of an automated literature sweep via the **ArXiv API** (querying the latest preprints in mathematics and computer science) and supplemented by targeted web searches, we have cross-referenced the 19 findings against the published scientific record.
+An automated literature sweep was performed via the **ArXiv API** (`src/literature_sweep.py`) and supplemented by targeted web searches to cross-reference the observations in this report against the published scientific record.
 
-Out of the 19 findings, **14 returned ZERO hits** across the ArXiv database and targeted mathematical web searches. While the foundational matrices (Báez-Duarte, Vasyunin) are known, the specific computational tears and boundaries discovered by this project appear to be **undocumented in the public mathematical literature.**
+> [!IMPORTANT]
+> **Correction (June 2026):** An earlier version of this addendum overstated the novelty of the observations listed in this report. After rigorous peer review, we have corrected the assessments below. The individual observations documented here are **not novel mathematical discoveries**. They describe well-known engineering and algorithmic challenges (data scaling, Runge's phenomenon, multicollinearity, numerical quadrature limits) encountered during the construction of the Sizzlin-Riemann neurosymbolic pipeline. The novelty of this project lies in the **pipeline architecture itself** (PyTorch → Kalkulator-AI → Lean 4), not in the individual failure modes it documented.
 
-### 🔴 Known / Published (2 Findings)
-- **Finding 11: The Rank-One Collapse**
-  - **ArXiv Hits:** 1 (*Spectral and Analytic Structure of the Nyman–Beurling–Báez–Duarte Approximation*, 2025 Preprint).
-  - **Assessment:** This recent preprint explicitly documents the anomaly, names it the "Rank-One Collapse," proves the distance floors at exactly 1/2, and confirms that correct numerical implementations must pivot to genuinely nonlinear $\{kx\}$ dilations.
-- **Finding 18: The $\mathcal{O}(N \log N)$ Fast-Projection Bypass**
-  - **ArXiv Hits:** 3 (*A strengthening of the Nyman-Beurling criterion for the Riemann Hypothesis*, J.F. Burnol).
-  - **Assessment:** The theoretical foundation of projecting onto subspace distributions is documented. Our highly optimized computational execution is novel, but the math is known.
+### Related Published Work
+- **Hayou, S. (2023).** *On the Connection Between Riemann Hypothesis and a Special Class of Neural Networks.* arXiv:2309.09171. Reformulates the Nyman-Beurling criterion as a neural network minimization problem. Directly relevant to Findings 1 and 14.
+- **Bettin, S., Conrey, J.B., & Farmer, D.W. (2012).** *An optimal choice of Dirichlet polynomials for the Nyman-Beurling criterion.* arXiv:1211.5191. Establishes optimal Dirichlet polynomial approximations within this framework.
+- **Báez-Duarte, L. (2003).** *A strengthening of the Nyman-Beurling criterion for the Riemann Hypothesis.* Published in Atti della Accademia Nazionale dei Lincei. Foundational work on the criterion used throughout this project.
+- **Bhattacharjee, D. et al. (2026).** *Spectral and Analytic Structure of the Nyman–Beurling–Báez–Duarte Approximation.* Preprints.org (DOI: 10.20944/preprints202506.0772.v2). Documents the Rank-One Collapse of the integer-dilate Gram matrix (related to Finding 11).
 
-### 🟡 Partial Overlap (3 Findings)
-- **Finding 1 (Observation of Trivial Fourier Convergence)** & **Finding 14 (The Dual-Master Paradox)**
-  - **ArXiv Hits:** 1 (*On the Connection Between Riemann Hypothesis and a Special Class of Neural Networks*).
-  - **Assessment:** General neural network intersections are known. The "Dual-Master Paradox" (Totient vs Möbius conflict) is a uniquely articulated observation of a known broader field.
-- **Finding 2 (The $1/k^2$ Macroscopic Geometric Core)**
-  - **ArXiv Hits:** 3 (*An optimal choice of Dirichlet polynomials for the Nyman-Beurling criterion*).
-  - **Assessment:** Dirichlet approximations are known, but the explicit computational proof that the matrix natively prioritizes quadratic $1/k^2$ decay to manage the $s=1$ pole provides a novel algorithmic verification.
+### Classification of Observations
+The observations in this report fall into three categories:
 
-### 🟢 Potentially Novel (14 Findings)
-The following 14 findings are completely absent from the ArXiv queries, representing prime candidates for original experimental mathematics research:
+**Well-Known Engineering Challenges (applied to a new domain):**
+- Finding 10 (Data scaling for small-variance targets) — standard ML preprocessing
+- Finding 12 (Mellin scaling failure on bounded domains) — standard calculus (u-substitution)
+- Finding 13 (Runge's phenomenon) — discovered by Carl Runge, 1901
+- Finding 16 (Multicollinearity in basis selection) — standard statistics
+- Finding 19 (scipy.integrate.quad on discontinuous functions) — known software limitation
 
-**Structural Matrix Collapses:**
+**Known Mathematical Properties (independently verified):**
+- Finding 11 (Rank-One Collapse) — documented in Bhattacharjee et al. (2026)
+- Finding 18 (Subspace Projection / Galerkin method) — standard linear algebra
 
-**Calculus & Machine Learning Failures:**
-- Finding 5: Empirical Analysis of Gradient-Induced Smoothing on Discrete Targets
-- Finding 10: Gradient Vanishing in High-Precision Arithmetic Formulations
-- Finding 13: Impact of Runge's Phenomenon on Algebraic Interpolation
-- Finding 15: Topological Constraint Violations in Unbounded Neural Network Predictions
-- Finding 19: Instability of Numerical Quadrature on High-Frequency Discontinuities
+**Novel Application Context (known concepts applied to Nyman-Beurling for the first time):**
+- Finding 1 (Totient structural dominance in bounded GCD matrices)
+- Finding 5 (Gradient-induced smoothing destroying discrete prime topology)
+- Finding 14 (Totient vs Möbius objective conflict at finite scales)
+- Finding 15 (Neural network constraint violation requiring formal verification)
 
-**Theoretical Limits & Heuristics:**
-- Finding 12: Limits of Mellin Transform Scaling Properties
-- Finding 16: Multicollinearity and Basis Absorption in Small-$N$ Heuristic Models
