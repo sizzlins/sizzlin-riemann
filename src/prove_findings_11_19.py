@@ -113,22 +113,9 @@ def prove_finding_16_multicollinearity_collapse():
     print("VERIFIED: The 'Divisor DNA' collapses completely when exposed to collinear fundamental terms.")
 
 def prove_finding_17_normalization_tear():
-    print("\n--- PROOF 17: The Normalization Tear ---")
-    N = 3
-    M = np.array([[ 0.5,  0.4,  0.4],
-                  [ 0.4,  0.5,  0.4],
-                  [ 0.4,  0.4, -0.1]])
-    L = np.array([1.0, 1.0, 1.0])
-    
-    eigenvalues = np.linalg.eigvalsh(M)
-    print(f"Eigenvalues of M: {eigenvalues}")
-    
-    a_opt = np.linalg.pinv(M) @ L
-    d2 = 1.0 - a_opt.T @ L
-    
-    print(f"Distance Squared (d_N^2): {d2:.6f}")
-    if d2 < 0:
-        print("VERIFIED: The negative eigenvalues force the projection a^T L to exceed 1.0, causing a negative distance tear.")
+    print("\n--- PROOF 17: [RETRACTED] ---")
+    print("  VERDICT: RETRACTED. The negative distance anomaly was caused")
+    print("  by negative eigenvalues, which were proven to be a bug in the matrix generation.")
 
 def prove_finding_18_fast_projection_bypass():
     print("\n--- PROOF 18: The O(N log N) Fast-Projection Bypass ---")

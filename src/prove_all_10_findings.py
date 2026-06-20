@@ -92,106 +92,28 @@ def finding_1():
     print(f"  But d_N^2 -> 0 is TRIVIAL: it's just Fourier-approximating a flat line.")
 
 def finding_2():
-    """The 1/k^2 Macroscopic Geometric Core (Phase 6)"""
     print(SEPARATOR)
-    print("FINDING 2: THE 1/k^2 MACROSCOPIC GEOMETRIC CORE")
-    print("Claim: True Báez-Duarte matrix natively demands 1/k^2 decay.")
+    print("FINDING 2: [RETRACTED]")
     print("=" * 80)
-
-    N = 100
-    M, L = build_true_system(N)
-    k_array = np.arange(1, N + 1, dtype=np.float64)
-
-    # Project onto single-term bases and compare distances
-    bases = {
-        "1/k":   1.0 / k_array,
-        "1/k^2": 1.0 / k_array**2,
-    }
-
-    for name, v in bases.items():
-        M_v = v @ M @ v
-        L_v = v @ L
-        C = L_v / M_v
-        a_proj = C * v
-        E = a_proj @ M @ a_proj
-        d2 = E - 2.0 * np.dot(a_proj, L) + 1.0
-        print(f"\n  Basis: a_k = C * {name}")
-        print(f"    Optimal C = {C:.6f}")
-        print(f"    d_N^2     = {d2:.8e}")
-
-    print(f"\n  VERDICT: 1/k^2 yields a MUCH lower d_N^2 than 1/k,")
-    print(f"  proving the matrix natively prefers quadratic decay.")
+    print("  VERDICT: RETRACTED. This finding relied on a bugged implementation")
+    print("  of the Vasyunin exact matrix which produced mathematically impossible")
+    print("  negative eigenvalues. It is a computational artifact, not reality.")
 
 def finding_3():
-    """The 'Zeta Pole Collision' (Phase 7)"""
     print(SEPARATOR)
-    print("FINDING 3: THE ZETA POLE COLLISION")
-    print("Claim: Pure mu(k)/k shatters against the s=1 pole.")
+    print("FINDING 3: [RETRACTED]")
     print("=" * 80)
-
-    N = 100
-    M, L = build_true_system(N)
-    k_array = np.arange(1, N + 1, dtype=np.float64)
-
-    mu_arr = np.array([float(mobius(int(k))) for k in range(1, N + 1)])
-    v_mu = mu_arr / k_array
-
-    M_v = v_mu @ M @ v_mu
-    L_v = v_mu @ L
-    C = L_v / M_v
-    a_mu = C * v_mu
-    E = a_mu @ M @ a_mu
-    d2_mu = E - 2.0 * np.dot(a_mu, L) + 1.0
-
-    # Compare against 1/k^2
-    v_k2 = 1.0 / k_array**2
-    M_v2 = v_k2 @ M @ v_k2
-    L_v2 = v_k2 @ L
-    C2 = L_v2 / M_v2
-    a_k2 = C2 * v_k2
-    E2 = a_k2 @ M @ a_k2
-    d2_k2 = E2 - 2.0 * np.dot(a_k2, L) + 1.0
-
-    print(f"\n  Pure mu(k)/k projection:")
-    print(f"    d_N^2 = {d2_mu:.8e}   <-- how well raw Möbius does alone")
-    print(f"  Pure 1/k^2 projection:")
-    print(f"    d_N^2 = {d2_k2:.8e}")
-    print(f"\n  VERDICT: Raw mu(k)/k CANNOT close the distance alone.")
-    print(f"  It perfectly targets zeros but collides with the s=1 pole.")
+    print("  VERDICT: RETRACTED. This finding relied on a bugged implementation")
+    print("  of the Vasyunin exact matrix which produced mathematically impossible")
+    print("  negative eigenvalues. It is a computational artifact, not reality.")
 
 def finding_4():
-    """The 0.21 Asymptotic Distance Floor (Phase 8)"""
     print(SEPARATOR)
-    print("FINDING 4: THE 0.21 ASYMPTOTIC DISTANCE FLOOR")
-    print("Claim: Hybrid basis asymptotes to ~0.21-0.22.")
+    print("FINDING 4: [RETRACTED]")
     print("=" * 80)
-
-    for N in [100, 250, 500]:
-        t0 = time.time()
-        M, L = build_true_system(N)
-        k_array = np.arange(1, N + 1, dtype=np.float64)
-
-        v1 = 1.0 / k_array**2
-        v2 = 1.0 / k_array
-        v3 = np.zeros(N, dtype=np.float64)
-        log_N = math.log(N)
-        for k in range(1, N + 1):
-            mu_k = mobius(k)
-            if mu_k != 0:
-                v3[k-1] = (float(mu_k) / k) * (1.0 - math.log(k) / log_N)
-
-        V_mat = np.column_stack((v1, v2, v3))
-        M_sub = V_mat.T @ M @ V_mat
-        L_sub = V_mat.T @ L
-        c = np.linalg.solve(M_sub, L_sub)
-        a_proj = V_mat @ c
-        E = a_proj @ M @ a_proj
-        d2 = E - 2.0 * np.dot(a_proj, L) + 1.0
-
-        print(f"\n  N={N:4d}: d_N^2 = {d2:.8e}  ({time.time()-t0:.1f}s)")
-
-    print(f"\n  VERDICT: d_N^2 consistently floors at ~0.21-0.22.")
-    print(f"  No classical 3-term basis can break below this barrier.")
+    print("  VERDICT: RETRACTED. This finding relied on a bugged implementation")
+    print("  of the Vasyunin exact matrix which produced mathematically impossible")
+    print("  negative eigenvalues. It is a computational artifact, not reality.")
 
 def finding_5():
     """The 'Continuous Shadow' Phenomenon (Phase 11)"""
@@ -223,159 +145,36 @@ def finding_5():
     print(f"  PyTorch's gradient descent smoothed away the prime structure.")
 
 def finding_6():
-    """The Truncation Cliff / Loss of Positive-Definiteness (Phase 5.3)"""
     print(SEPARATOR)
-    print("FINDING 6: THE TRUNCATION CLIFF (INDEFINITE MATRIX)")
-    print("Claim: True Báez-Duarte matrix has negative eigenvalues.")
+    print("FINDING 6: [RETRACTED]")
     print("=" * 80)
-
-    N = 100
-    M, L = build_true_system(N)
-    eigenvalues = np.linalg.eigvalsh(M)
-    eigenvalues_sorted = np.sort(eigenvalues)
-
-    n_neg = np.sum(eigenvalues < 0)
-    lam_min = eigenvalues_sorted[0]
-    lam_max = eigenvalues_sorted[-1]
-    cond = lam_max / abs(lam_min) if abs(lam_min) > 1e-15 else float('inf')
-
-    print(f"\n  N = {N}")
-    print(f"  Total eigenvalues     : {len(eigenvalues)}")
-    print(f"  Negative eigenvalues  : {n_neg}")
-    print(f"  lambda_min            : {lam_min:.6f}")
-    print(f"  lambda_max            : {lam_max:.6f}")
-    print(f"  Condition number      : {cond:.2f}")
-    print(f"\n  Bottom 5 eigenvalues:")
-    for i in range(5):
-        print(f"    lambda_{i+1} = {eigenvalues_sorted[i]:.6f}")
-
-    print(f"\n  VERDICT: lambda_min = {lam_min:.4f} < 0 proves the matrix")
-    print(f"  is INDEFINITE. Standard Hilbert space inner products fail.")
+    print("  VERDICT: RETRACTED. This finding relied on a bugged implementation")
+    print("  of the Vasyunin exact matrix which produced mathematically impossible")
+    print("  negative eigenvalues. It is a computational artifact, not reality.")
 
 def finding_7():
-    """Gram-Schmidt Orthogonalization Plunge (Phase 9)"""
     print(SEPARATOR)
-    print("FINDING 7: GRAM-SCHMIDT ORTHOGONALIZATION PLUNGE")
-    print("Claim: Orthogonalizing the basis accelerates collapse.")
+    print("FINDING 7: [RETRACTED]")
     print("=" * 80)
-
-    N = 100
-    M, L = build_true_system(N)
-    k_array = np.arange(1, N + 1, dtype=np.float64)
-
-    # Non-orthogonal 2-term projection
-    v1 = 1.0 / k_array**2
-    v2 = 1.0 / k_array
-    V_raw = np.column_stack((v1, v2))
-    M_sub_raw = V_raw.T @ M @ V_raw
-    L_sub_raw = V_raw.T @ L
-    c_raw = np.linalg.solve(M_sub_raw, L_sub_raw)
-    a_raw = V_raw @ c_raw
-    d2_raw = a_raw @ M @ a_raw - 2.0 * np.dot(a_raw, L) + 1.0
-
-    # QR-orthogonalized projection
-    Q, R = np.linalg.qr(V_raw)
-    M_sub_orth = Q.T @ M @ Q
-    L_sub_orth = Q.T @ L
-    c_orth = np.linalg.solve(M_sub_orth, L_sub_orth)
-    a_orth = Q @ c_orth
-    d2_orth = a_orth @ M @ a_orth - 2.0 * np.dot(a_orth, L) + 1.0
-
-    # Full system pseudoinverse
-    a_full = np.linalg.lstsq(M, L, rcond=1e-10)[0]
-    d2_full = a_full @ M @ a_full - 2.0 * np.dot(a_full, L) + 1.0
-
-    print(f"\n  N = {N}")
-    print(f"  d_N^2 (raw 2-term basis)            : {d2_raw:.8e}")
-    print(f"  d_N^2 (QR-orthogonalized basis)      : {d2_orth:.8e}")
-    print(f"  d_N^2 (full N×N pseudoinverse)        : {d2_full:.8e}")
-    print(f"\n  VERDICT: Both d_N^2 values should be similar (since span is")
-    print(f"  the same), but the full pseudoinverse plunges to {d2_full:.4f},")
-    print(f"  proving that expanding dimensions into the indefinite matrix")
-    print(f"  drives energy into the negative abyss.")
+    print("  VERDICT: RETRACTED. This finding relied on a bugged implementation")
+    print("  of the Vasyunin exact matrix which produced mathematically impossible")
+    print("  negative eigenvalues. It is a computational artifact, not reality.")
 
 def finding_8():
-    """Finite Optimal Coefficients Lack Möbius Correlation (Phase 9)"""
     print(SEPARATOR)
-    print("FINDING 8: ZERO MÖBIUS CORRELATION")
-    print("Claim: Pearson correlation between optimal a_k and mu(k)/k = 0.000.")
+    print("FINDING 8: [RETRACTED]")
     print("=" * 80)
-
-    N = 100
-    M, L = build_true_system(N)
-    a_exact = np.linalg.solve(M, L)
-    k_array = np.arange(1, N + 1, dtype=np.float64)
-
-    mu_arr = np.array([float(mobius(int(k))) for k in range(1, N + 1)])
-    mu_over_k = mu_arr / k_array
-
-    # Only correlate over squarefree k (where mu != 0)
-    mask = mu_arr != 0
-    r_all, p_all = pearsonr(a_exact, mu_over_k)
-    r_sf, p_sf = pearsonr(a_exact[mask], mu_over_k[mask])
-
-    print(f"\n  N = {N}")
-    print(f"  Pearson corr(a_k, mu(k)/k) [all k]       : {r_all:.6f}  (p={p_all:.4f})")
-    print(f"  Pearson corr(a_k, mu(k)/k) [squarefree k] : {r_sf:.6f}  (p={p_sf:.4f})")
-    print(f"\n  VERDICT: Correlation ~ 0.00 proves the finite solver's")
-    print(f"  optimal coefficients bear ZERO structural resemblance")
-    print(f"  to the theoretical Möbius inverse mu(k)/k.")
+    print("  VERDICT: RETRACTED. This finding relied on a bugged implementation")
+    print("  of the Vasyunin exact matrix which produced mathematically impossible")
+    print("  negative eigenvalues. It is a computational artifact, not reality.")
 
 def finding_9():
-    """The Spectral Leakage Evaporation (Phase 15)"""
     print(SEPARATOR)
-    print("FINDING 9: THE SPECTRAL LEAKAGE EVAPORATION")
-    print("Claim: Blackman window obliterates the 11.86 spike.")
+    print("FINDING 9: [RETRACTED]")
     print("=" * 80)
-
-    N = 200  # Smaller N for speed; same phenomenon
-    M, L = build_true_system(N)
-    k_array = np.arange(1, N + 1, dtype=np.float64)
-
-    v1 = 1.0 / k_array**2
-    v2 = 1.0 / k_array
-    v3 = np.zeros(N)
-    log_N = math.log(N)
-    for k in range(1, N + 1):
-        mu_k = mobius(k)
-        if mu_k != 0:
-            v3[k-1] = (float(mu_k) / k) * (1.0 - math.log(k) / log_N)
-
-    V_mat = np.column_stack((v1, v2, v3))
-    c = np.linalg.solve(V_mat.T @ M @ V_mat, V_mat.T @ L)
-    a_proj = V_mat @ c
-    r_N = L - M @ a_proj
-
-    # Logarithmic DFT
-    log_k = np.log(k_array)
-    y_vals = np.linspace(5, 30, 1000)
-
-    def log_dft(residual):
-        spectrum = np.zeros(len(y_vals))
-        for i, y in enumerate(y_vals):
-            phase = y * log_k
-            re = np.sum(residual * np.cos(phase))
-            im = np.sum(residual * np.sin(phase))
-            spectrum[i] = math.sqrt(re**2 + im**2)
-        return spectrum
-
-    spec_raw = log_dft(r_N)
-    raw_peak_idx = np.argmax(spec_raw)
-    raw_peak_y = y_vals[raw_peak_idx]
-    raw_peak_amp = spec_raw[raw_peak_idx]
-
-    window = np.blackman(N)
-    spec_windowed = log_dft(r_N * window)
-    win_peak_idx = np.argmax(spec_windowed)
-    win_peak_amp = spec_windowed[win_peak_idx]
-
-    print(f"\n  N = {N}")
-    print(f"  RAW spectrum peak      : y = {raw_peak_y:.4f}, amplitude = {raw_peak_amp:.4f}")
-    print(f"  BLACKMAN spectrum peak : amplitude = {win_peak_amp:.4f}")
-    print(f"  Ratio (windowed/raw)   : {win_peak_amp/raw_peak_amp:.4f}")
-    print(f"\n  Known 1st Riemann zero : y = 14.1347")
-    print(f"\n  VERDICT: The Blackman window reduces the peak to near-zero,")
-    print(f"  proving the spike was pure truncation noise, not a real signal.")
+    print("  VERDICT: RETRACTED. This finding relied on a bugged implementation")
+    print("  of the Vasyunin exact matrix which produced mathematically impossible")
+    print("  negative eigenvalues. It is a computational artifact, not reality.")
 
 def finding_10():
     """The Micro-Variance Trap (Phase 1)"""
