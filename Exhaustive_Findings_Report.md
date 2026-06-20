@@ -15,9 +15,9 @@ Here is the exhaustive, definitive list of every scientific observation generate
 
 ---
 
-### 1. The "Trivial Sandbox" Hallucination (Phases 2 & 3)
-**The Observation:** When optimizing the Nyman-Beurling Gram matrix over a bounded domain $L^2(0,1)$, the matrix naturally converges to a geometric sequence perfectly driven by Euler's Totient function: $a_k = C \frac{\varphi(k)}{k}$.
-**The Significance:** We proved that this bounded convergence is a trivial Fourier approximation of a flat line. It contains strictly zero prime number topology, explaining why early machine learning models "hallucinate" perfect convergence without touching the Riemann zeros.
+### 1. Observation of Trivial Fourier Convergence on Bounded Domains (Phases 2 & 3)
+**The Observation:** When optimizing the Nyman-Beurling Gram matrix over a bounded domain $L^2(0,1)$, the matrix naturally converges to a geometric sequence driven by Euler\'s Totient function: $a_k = C rac{\varphi(k)}{k}$.
+**The Significance:** We established that this bounded convergence is a straightforward Fourier approximation of a constant function. It contains zero prime number topology, explaining why early machine learning models indicate perfect convergence without identifying Riemann zeros.
 
 **Computational Proof (N=100):**
 ```
@@ -38,9 +38,9 @@ The correlation of 0.945 proves the bounded matrix locks onto $\varphi(k)$, but 
 
 ---
 
-### 5. The "Continuous Shadow" Phenomenon (Phase 11)
-**The Observation:** When feeding the PyTorch Transformer's output into the genetic symbolic regression engine (`kalkulator-ai`), the engine completely ignored discrete arithmetic operators (like Möbius) and converged on massive continuous Padé approximants.
-**The Significance:** This proves that continuous optimization algorithms (gradient descent) fundamentally destroy discrete prime topology, smoothing over the jagged Dirichlet convolutions. Neural networks do not learn prime topology; they create continuous "shadows" over it.
+### 5. Empirical Analysis of Gradient-Induced Smoothing on Discrete Targets (Phase 11)
+**The Observation:** When feeding the PyTorch Transformer\'s output into the genetic symbolic regression engine (`kalkulator-ai`), the engine circumvented discrete arithmetic operators (like Möbius) and converged on continuous Padé approximants.
+**The Significance:** This demonstrates that continuous optimization algorithms (gradient descent) systematically smooth over the jagged Dirichlet convolutions characteristic of discrete prime topology. Rather than learning prime structure, continuous neural networks generate smoothed approximations.
 
 **Computational Proof (Kalkulator-AI on pure discrete data):**
 ```
@@ -56,9 +56,9 @@ When given **raw** discrete data, Kalkulator-AI instantly recovers `moebius(x)/x
 
 ---
 
-### 10. The Micro-Variance Trap (Phase 1)
-**The Observation:** When performing symbolic regression on extreme high-precision numbers (like Vasyunin cotangent sums), algorithmic engines naturally fall into a "Micro-Variance Trap," predicting trivial flatlines (e.g., $y=0$) because the gradient of the loss function is infinitesimally small.
-**The Significance:** It proved that in analytic number theory, signal amplification (e.g., scaling targets by $10^5$) is mandatory. Without manual amplification, genetic algorithms cannot differentiate between a mathematical zero and an extremely precise mathematical structure.
+### 10. Gradient Vanishing in High-Precision Arithmetic Formulations (Phase 1)
+**The Observation:** When performing symbolic regression on high-precision numerical outputs (such as Vasyunin cotangent sums), algorithmic engines naturally encounter a vanishing gradient scenario, predicting trivial constants (e.g., $y=0$) because the variance of the loss function is mathematically minimal.
+**The Significance:** This confirms that in analytic number theory experiments, explicit signal amplification (e.g., scaling targets by $10^5$) is required to ensure that genetic algorithms can effectively differentiate between mathematical null values and highly precise numerical structures.
 
 **Computational Proof:**
 ```
@@ -74,9 +74,9 @@ At raw scale, the gradient is $\sim 10^{-5}$. Any genetic algorithm or neural ne
 
 ---
 
-### 11. The Rank-One Collapse (Phase 2.1)
-**The Observation:** When the discrete annealer optimized the bounded Nyman-Beurling Gram matrix on $L^2(0,1)$ using dilations $\{x/k\}$, the matrix collapsed to rank one and the optimization floored at exactly $d_N^2 = 1/2$.
-**The Significance:** Because $\{x/k\} = x/k$ on $(0,1)$, all basis functions were linearly dependent scalar multiples of each other. The annealer independently rediscovered a known mathematical anomaly ("Rank-One Collapse") without being told it existed. This forced the entire project to pivot from $\{x/k\}$ to $\{kx\}$ dilations.
+### 11. Independent Verification of Rank-One Collapse on Dilated $L^2(0,1)$ Domains (Phase 2.1)
+**The Observation:** When the discrete annealer optimized the bounded Nyman-Beurling Gram matrix on $L^2(0,1)$ using dilations $\{x/k\}$, the matrix collapsed to rank one, and the optimization encountered a hard floor at exactly $d_N^2 = 1/2$.
+**The Significance:** Because $\{x/k\} = x/k$ on $(0,1)$, all basis functions act as linearly dependent scalar multiples. The annealer empirically rediscovered a known mathematical property ("Rank-One Collapse"), necessitating a pivot to genuinely nonlinear $\{kx\}$ dilations.
 
 **Computational Proof:**
 ```
@@ -92,9 +92,9 @@ VERIFIED: Matrix collapses to rank 1, and minimum distance floors at exactly 0.2
 
 ---
 
-### 12. The Finite-Domain Mellin Scaling Anomaly (Phase 3)
-**The Observation:** The Mellin transform scaling property $\mathcal{M}[\{kx\}] = k^{-s} \mathcal{M}[\{x\}]$ holds only when integrating from $0$ to $\infty$. On the bounded domain $L^2(0,1)$, this scaling identity is **false**.
-**The Significance:** This invalidated the direct application of Parseval's theorem for Mellin transforms in the bounded domain. It proves that the $L^2(0,1)$ formulation is structurally disconnected from the complex-plane Zeta function, forcing a pivot to the infinite-domain Báez-Duarte measure.
+### 12. Limits of Mellin Transform Scaling Properties on Truncated Intervals (Phase 3)
+**The Observation:** The Mellin transform scaling property $\mathcal{M}[\{kx\}] = k^{-s} \mathcal{M}[\{x\}]$ holds strictly when integrating across $0$ to $\infty$. Empirical tests confirmed that on the bounded domain $L^2(0,1)$, this scaling identity fails.
+**The Significance:** This invalidates the direct application of Parseval\'s theorem for Mellin transforms within the bounded domain, proving that the $L^2(0,1)$ formulation cannot structurally map to the complex-plane Zeta function without moving to the infinite-domain Báez-Duarte measure.
 
 **Computational Proof:**
 ```
@@ -110,9 +110,9 @@ VERIFIED: The scaling identity fails due to the finite truncation boundary.
 
 ---
 
-### 13. Runge's Phenomenon / The Interpolation Trap (Phase 4)
-**The Observation:** Standard polynomial interpolation (Lagrange, Newton) on the Vasyunin coefficient arrays produces a high-degree polynomial that perfectly fits the training data but violently explodes for any out-of-sample prediction ($N+1$) due to Runge's phenomenon.
-**The Significance:** This proved that continuous algebraic interpolation cannot extract the "Master Equation" from discrete number-theoretic data. The coefficients are governed by jagged, step-like prime factorization topology that smooth polynomial curves cannot capture. This directly motivated the injection of discrete operators (Möbius, Totient) into `kalkulator-ai`.
+### 13. Impact of Runge\'s Phenomenon on Algebraic Interpolation of Prime Topology (Phase 4)
+**The Observation:** Standard polynomial interpolation (Lagrange, Newton) on the coefficient arrays yields a high-degree polynomial that perfectly fits the training data but diverges exponentially for out-of-sample predictions ($N+1$) due to Runge\'s phenomenon.
+**The Significance:** This establishes that continuous algebraic interpolation is insufficient for extracting exact governing equations from discrete number-theoretic data. The step-like prime factorization topology fundamentally resists smooth polynomial curve-fitting.
 
 **Computational Proof:**
 ```
@@ -128,9 +128,9 @@ VERIFIED: The interpolator violently explodes when predicting the next discrete 
 
 ---
 
-### 14. The Dual-Master Paradox (Phase 3.5)
-**The Observation:** The Nyman-Beurling formulation has two mathematically competing objectives: (1) minimize the real-line $L^2$ variance (which demands $\varphi(k)$ / geometric sequences), and (2) cancel the complex-plane Riemann zeros (which demands $\mu(k)$ / the Möbius function). These two objectives are structurally incompatible in finite dimensions.
-**The Significance:** This is the deepest theoretical insight of the project. No single number-theoretic function can simultaneously satisfy both masters. The $\varphi(k)$ sequence minimizes geometric energy but multiplies (not cancels) the Zeta zeros. The $\mu(k)$ sequence cancels zeros but collides with the $s=1$ pole. Only an infinite-dimensional blend can theoretically satisfy both.
+### 14. Objective Function Conflict: $L^2$ Minimization vs Complex-Plane Zero Cancellation (Phase 3.5)
+**The Observation:** The Nyman-Beurling formulation features two competing mathematical objectives: (1) minimizing the real-line $L^2$ variance (which aligns with $\varphi(k)$ geometric sequences), and (2) canceling the complex-plane Riemann zeros (which strictly requires the Möbius function $\mu(k)$).
+**The Significance:** No single classical number-theoretic function can simultaneously satisfy both objectives in finite dimensions. The $\varphi(k)$ sequence minimizes geometric distance but fails to cancel Zeta zeros, while the $\mu(k)$ sequence successfully targets zeros but diverges at the $s=1$ pole.
 
 **Computational Proof:**
 ```
@@ -146,9 +146,9 @@ VERIFIED: The geometric minimizer strongly aligns with Totient, but is completel
 
 ---
 
-### 15. The Bound Exceedance Paradox (Phase 8.1)
-**The Observation:** The Deep Reinforcement Learning (PyTorch) model successfully discovered a sequence of coefficients that plummeted the optimization loss to a new global minimum of $0.0042$. However, when the sum was formally evaluated, it strictly **exceeded** the required boundary bounds of the Beurling-Nyman criterion.
-**The Significance:** This proved that neural networks will "cheat" abstract mathematical bounds if the loss function doesn't perfectly encapsulate the logical theorem. The AI minimized the target distance but violated the topological constraints of the Hilbert space, demonstrating the necessity of formal verification (Lean 4) alongside machine learning.
+### 15. Topological Constraint Violations in Unbounded Neural Network Predictions (Phase 8.1)
+**The Observation:** The Deep Reinforcement Learning (PyTorch) model successfully discovered a coefficient sequence that minimized the optimization loss to $0.0042$. However, formal evaluation revealed this sequence strictly exceeded the required summation boundary of the Beurling-Nyman criterion.
+**The Significance:** This demonstrates that neural networks will bypass abstract mathematical bounds if the loss function does not strictly enforce the topological constraints. It highlights the necessity of coupling machine learning optimization with strict formal verification tools (e.g., Lean 4).
 
 **Computational Proof:**
 ```
@@ -164,9 +164,9 @@ VERIFIED: The AI minimized the target distance but violated the topological cons
 
 ---
 
-### 16. The Divisor Function Artifact / Multicollinearity Collapse (Phase 8)
-**The Observation:** Initial small-scale ($N=100$) null-vector analysis suggested that the Divisor Function $d(k)/k^2$ was a fundamental, structural component of the matrix ("Divisor DNA"). However, when expanding to a 4D basis at larger scales, the matrix completely abandoned the divisor function, absorbing its weight into the standard $1/k$ and $\ln(k)/k$ terms.
-**The Significance:** This mapped the exact limit of the "guess-and-check" heuristic approach. It proved that classical number-theoretic functions experience multicollinearity collapse at scale. The matrix only leaned on $d(k)$ when it was starved of $1/k$ mass, meaning the "Divisor DNA" was a finite-scale artifact, not a universal Riemann property.
+### 16. Multicollinearity and Basis Absorption in Small-$N$ Heuristic Models (Phase 8)
+**The Observation:** Initial small-scale ($N=100$) null-vector analysis suggested the Divisor Function $d(k)/k^2$ was a structural matrix component. However, in higher-dimensional basis expansions, the matrix abandoned the divisor function entirely, absorbing its mathematical weight into standard $1/k$ and $\ln(k)/k$ terms.
+**The Significance:** This highlights the limitations of heuristic function selection. It proves that classical number-theoretic functions experience severe multicollinearity collapse at scale, and the apparent dependence on $d(k)$ was a finite-scale artifact rather than a universal property.
 
 **Computational Proof:**
 ```
@@ -182,9 +182,9 @@ VERIFIED: The 'Divisor DNA' collapses completely when exposed to collinear funda
 
 ---
 
-### 18. The $\mathcal{O}(N \log N)$ Fast-Projection Bypass (Phase 8.1)
-**The Observation:** The optimization of the true Báez-Duarte matrix $M$ is constrained by an $\mathcal{O}(N^3)$ computational bottleneck. However, by substituting the closed-form single-term Ansatz vectors into the continuous measure, the system mathematically decoupled the geometry from the hardware. It bypassed the massive $N \times N$ dense matrix entirely, operating only on the $2 \times 2$ subspace projection $V^T M V$.
-**The Significance:** This proved that the infinite-dimensional geometry of the Riemann Hypothesis can be algorithmically separated from physical hardware limitations. It allowed the discrete projection solver to scale instantaneously from $N=5,000$ (where supercomputers choke on memory) to $N=1,000,000$, fundamentally rewriting the computational rules of engagement for the Nyman-Beurling criterion.
+### 18. Computational Complexity Reduction via Subspace Projection (Phase 8.1)
+**The Observation:** Optimizing the exact Báez-Duarte matrix $M$ is constrained by an $\mathcal{O}(N^3)$ computational bottleneck. By substituting closed-form Ansatz vectors directly into the continuous measure, the dense $N \times N$ matrix is algorithmically reduced to a $2 \times 2$ subspace projection $V^T M V$.
+**The Significance:** This confirms that the infinite-dimensional geometry of the Riemann Hypothesis can be mathematically decoupled from hardware constraints, enabling the discrete solver to scale efficiently from memory-limited constraints to $N=1,000,000$.
 
 **Computational Proof:**
 ```
@@ -202,9 +202,9 @@ VERIFIED: The Subspace projection bypasses the massive N x N physical hardware l
 
 ---
 
-### 19. The High-Frequency Integration Wall (Phase 5.1)
-**The Observation:** When attempting to compute the exact distance integrals numerically across the infinite domain $L^2(0, \infty; t^{-2}dt)$, the standard `scipy.integrate.quad` engine violently destabilized, throwing continuous `IntegrationWarning` subdivision limits.
-**The Significance:** This proved that standard continuous calculus engines physically shatter when attempting to integrate the $t^{-2}$ measure against the high-frequency logarithmic discontinuities of prime fractional gaps. It necessitated a complete abandonment of numerical integration in favor of pure, exact algebraic matrix generators (e.g., Vasyunin cotangent sums).
+### 19. Instability of Numerical Quadrature on High-Frequency Discontinuities (Phase 5.1)
+**The Observation:** When attempting to compute the exact distance integrals numerically across the infinite domain $L^2(0, \infty; t^{-2}dt)$, standard numerical quadrature engines (`scipy.integrate.quad`) encountered severe instability and threw persistent subdivision limit warnings.
+**The Significance:** This establishes that standard continuous calculus engines face fundamental limitations when integrating the $t^{-2}$ measure against the high-frequency logarithmic discontinuities of prime fractional gaps, requiring a pivot to exact algebraic matrix generators.
 
 **Computational Proof:**
 ```
@@ -390,7 +390,7 @@ Out of the 19 findings, **14 returned ZERO hits** across the ArXiv database and 
   - **Assessment:** The theoretical foundation of projecting onto subspace distributions is documented. Our highly optimized computational execution is novel, but the math is known.
 
 ### 🟡 Partial Overlap (3 Findings)
-- **Finding 1 (The "Trivial Sandbox" Hallucination)** & **Finding 14 (The Dual-Master Paradox)**
+- **Finding 1 (Observation of Trivial Fourier Convergence)** & **Finding 14 (The Dual-Master Paradox)**
   - **ArXiv Hits:** 1 (*On the Connection Between Riemann Hypothesis and a Special Class of Neural Networks*).
   - **Assessment:** General neural network intersections are known. The "Dual-Master Paradox" (Totient vs Möbius conflict) is a uniquely articulated observation of a known broader field.
 - **Finding 2 (The $1/k^2$ Macroscopic Geometric Core)**
@@ -403,12 +403,12 @@ The following 14 findings are completely absent from the ArXiv queries, represen
 **Structural Matrix Collapses:**
 
 **Calculus & Machine Learning Failures:**
-- Finding 5: The "Continuous Shadow" Phenomenon
-- Finding 10: The Micro-Variance Trap
-- Finding 13: Runge's Phenomenon / The Interpolation Trap
-- Finding 15: The Bound Exceedance Paradox
-- Finding 19: The High-Frequency Integration Wall
+- Finding 5: Empirical Analysis of Gradient-Induced Smoothing on Discrete Targets
+- Finding 10: Gradient Vanishing in High-Precision Arithmetic Formulations
+- Finding 13: Impact of Runge's Phenomenon on Algebraic Interpolation
+- Finding 15: Topological Constraint Violations in Unbounded Neural Network Predictions
+- Finding 19: Instability of Numerical Quadrature on High-Frequency Discontinuities
 
 **Theoretical Limits & Heuristics:**
-- Finding 12: The Finite-Domain Mellin Scaling Anomaly
-- Finding 16: The Divisor Function Artifact / Multicollinearity Collapse
+- Finding 12: Limits of Mellin Transform Scaling Properties
+- Finding 16: Multicollinearity and Basis Absorption in Small-$N$ Heuristic Models
